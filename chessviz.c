@@ -30,9 +30,31 @@ void BoardInit(char* board)
     board[63] = 'R';
 }
 
+void BoardPrint(char* board)
+{
+    int i, j;
+    for (i=0; i<8; i++){
+        printf("%d|", 8-i);
+        for (j=0; j<8; j++){
+            printf("%c ", board[(i*8)+j]);
+        }
+        printf("\n");
+    }
+    for (i=0; i<=8; i++){
+        printf("--");
+    }
+    printf("\n");
+    printf("  ");
+    for (i=0; i<8; i++){
+        printf("%c ", 65+i);
+    }
+    printf("\n");
+}
+
 int main()
 {
     char board[64];
     BoardInit(&board);
+    BoardPrint(&board);
     return 0;
 }
