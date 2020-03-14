@@ -3,39 +3,39 @@
 void BoardInit(char* board)
 {
     int i;
-    board[0] = 'r';
-    board[1] = 'n';
-    board[2] = 'b';
-    board[3] = 'q';
-    board[4] = 'k';
-    board[5] = 'b';
-    board[6] = 'n';
-    board[7] = 'r';
+    board[0] = 'R';
+    board[1] = 'N';
+    board[2] = 'B';
+    board[3] = 'K';
+    board[4] = 'Q';
+    board[5] = 'B';
+    board[6] = 'N';
+    board[7] = 'R';
     for (i=8; i<=15; i++){
-        board[i] = 'p';
+        board[i] = 'P';
     }
     for (i=16; i<=47; i++){
         board[i] = ' ';
     }
     for (i=48; i<=55; i++){
-        board[i] = 'P';
+        board[i] = 'p';
     }
-    board[56] = 'R';
-    board[57] = 'N';
-    board[58] = 'B';
-    board[59] = 'Q';
-    board[60] = 'K';
-    board[61] = 'B';
-    board[62] = 'N';
-    board[63] = 'R';
+    board[56] = 'r';
+    board[57] = 'n';
+    board[58] = 'b';
+    board[59] = 'k';
+    board[60] = 'q';
+    board[61] = 'b';
+    board[62] = 'n';
+    board[63] = 'r';
 }
 
 void BoardPrint(char* board)
 {
     int i, j;
-    for (i=0; i<8; i++){
-        printf("%d|", 8-i);
-        for (j=0; j<8; j++){
+    for (i=7; i>=0; i--){
+        printf("%d|", i+1);
+        for (j=7; j>=0; j--){
             printf("%c ", board[(i*8)+j]);
         }
         printf("\n");
