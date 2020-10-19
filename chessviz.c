@@ -54,7 +54,7 @@ void BoardPrint(char* board)
 int main()
 {
     char board[64];
-    BoardInit(&board);
-    BoardPrint(&board);
+    BoardInit(board);
+    BoardPrint(board);
     return 0;
 }
